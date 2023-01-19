@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MotorcycleConstruction.Domain
 {
-    public class CombustionMotorcycle
+    public class Motorcycle
     {
         public int Id { get; private set; }
         public string Model { get; private set; }
@@ -25,13 +25,13 @@ namespace MotorcycleConstruction.Domain
         public string GroudClearance { get; private set; }
         public string DryWeight { get; private set; }
         public DateTime FabricationDate { get; private set; }
-        public List<ComponentsMotorcyle> ComponentsMotorcyle { get; private set; }
+        public ComponentsMotorcyle ComponentsMotorcyle { get; private set; }
 
-        public CombustionMotorcycle(int id, string model, string color, string maxPower,
+        public Motorcycle(int id, string model, string color, string maxPower,
             string maxTorque, string topSpeed, string fuelCapacity, string alternador,
             string battery, string overallWidht, string overallHeight, string seatHeight,
             string whellBase, string groudClearance, string dryWeight,
-            DateTime fabricationDate, List<ComponentsMotorcyle> componentsMotorcyle)
+            DateTime fabricationDate, ComponentsMotorcyle componentsMotorcyle)
         {
             Id = id;
             Model = model;

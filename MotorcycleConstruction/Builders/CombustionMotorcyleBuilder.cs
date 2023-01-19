@@ -12,23 +12,18 @@ namespace MotorcycleConstruction.Builders
     {
         public override void AddComponentsMotorcycle()
         {
-            _componentsMotorcyle = new List<ComponentsMotorcyle>();
+            _componentsMotorcyle = new ComponentsMotorcyle();
 
-            _componentsMotorcyle.Add(new ComponentsMotorcyle(EMotorcycleComponents.Handlebar));
-            _componentsMotorcyle.Add(new ComponentsMotorcyle(EMotorcycleComponents.Structure));
-            _componentsMotorcyle.Add(new ComponentsMotorcyle(EMotorcycleComponents.Engine));
-            _componentsMotorcyle.Add(new ComponentsMotorcyle(EMotorcycleComponents.Suspension));
-            _componentsMotorcyle.Add(new ComponentsMotorcyle(EMotorcycleComponents.RearView));
-            _componentsMotorcyle.Add(new ComponentsMotorcyle(EMotorcycleComponents.Tires));
-            _componentsMotorcyle.Add(new ComponentsMotorcyle(EMotorcycleComponents.FuelTank));
+            _componentsMotorcyle.MotorcycleCombustionComponents = EMotorcycleCombustionComponents.Handlebar |
+                EMotorcycleCombustionComponents.Engine | EMotorcycleCombustionComponents.Handlebar | EMotorcycleCombustionComponents.Wheels |
+                EMotorcycleCombustionComponents.Structure | EMotorcycleCombustionComponents.Suspension | EMotorcycleCombustionComponents.FuelTank;
         }
 
         public override void BuildMotorCycle()
         {
-            _motorcycle = new CombustionMotorcycle(2, "Ducati Monster", "Red", "200-HP", "50kg", "300km/h", "12v", "100MM", "100MM", "100MM", "17pol", "1pol", "180kg", "17pol", "100MM", DateTime.Now, _componentsMotorcyle);
+            _motorcycle = new Motorcycle(2, "Ducati Monster", "Red", "200-HP", "50kg", "300km/h", "12v", "100MM", "100MM", "100MM", "17pol", "1pol", "180kg", "17pol", "100MM", DateTime.Now, _componentsMotorcyle);
 
-            Console.WriteLine($"BuildMotorCycle Combustion id : {_motorcycle.Id} Marca : {_motorcycle.Model}");
-
+            Console.WriteLine($"BuildMotorCycle Combustion id : {_motorcycle.Id} Marca : {_motorcycle.Model} Components : {_componentsMotorcyle.MotorcycleCombustionComponents}");
         }
 
         public override void TestMotorCycle()

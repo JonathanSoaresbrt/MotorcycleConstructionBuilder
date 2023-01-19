@@ -9,10 +9,8 @@ namespace MotorcycleConstruction.Domain
 {
     public class ComponentsMotorcyle
     {
-        public EMotorcycleComponents MotorcycleComponents { get; private set; }
-        public ComponentsMotorcyle(EMotorcycleComponents motorcycleComponents)
-        {
-            MotorcycleComponents = motorcycleComponents;
-        }
+        public EMotorcycleCombustionComponents MotorcycleCombustionComponents { get; set; }
+        public EMotorcycleEletricComponents MotorcycleEletricComponents { get; set; }
+ 
     }
 }
