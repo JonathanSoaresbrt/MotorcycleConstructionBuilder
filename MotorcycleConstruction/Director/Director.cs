@@ -11,8 +11,8 @@ namespace MotorcycleConstruction.Director
     {
         public Director(MotorcycleBuilder builder)
         {
-            builder.AddComponentsMotorcycle();
-            builder.BuildMotorCycle();
+            builder.BuildMotorCycleCombustion();
+            builder.BuildEletricMotorCycle();
             builder.TestMotorCycle();
         }
     }

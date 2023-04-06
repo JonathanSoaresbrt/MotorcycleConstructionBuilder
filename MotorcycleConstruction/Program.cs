@@ -1,15 +1,11 @@
 ﻿
 using MotorcycleConstruction.Builders;
 using MotorcycleConstruction.Director;
-using MotorcycleConstruction.Domain;
 
-CombustionMotorcyleBuilder builderCombustionMotorcyle;
-EletricMotorcyleBuilder builderEletricMotorcyle;
+MotorcycleBuilder builderMotorcyle;
 
 Director director;
 
-builderCombustionMotorcyle = new CombustionMotorcyleBuilder();
-builderEletricMotorcyle = new EletricMotorcyleBuilder();
+builderMotorcyle = new MotorcycleBuilder();
 
-director = new Director(builderCombustionMotorcyle);
-director = new Director(builderEletricMotorcyle);
+director = new Director(builderMotorcyle);
